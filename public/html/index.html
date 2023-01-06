@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market</title>
+    <script src="../javascript/data.js"></script>
+    <script src="../javascript/Functions.js"></script>
+    <script src="../javascript/DateGenerater.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1>Stock Market</h1>
+    <h3 id="marketStatus" class="tableC"></h3>
+    <p id="hours-diff" class="tableC"></p>
+    <p id="date" class="tableC"></p>
+<div>
+    <button id="filter-button" onclick="filter()">Filter</button>
+    <button id="remove-filter" style="display: none;" onclick="removeFilter()">Remove-Filter</button>
+</div>
+
+    <table id="stockTable">
+        <thead>
+            <tr>
+                <th>Logo</th>
+                <th>Ticker</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Value</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tableB"></tbody>
+    </table>
+</body>
+
+</html>
