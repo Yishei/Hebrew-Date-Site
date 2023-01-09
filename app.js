@@ -17,11 +17,7 @@ app.get('/stockMarket', (req, res, next) => {
 app.get('/hebrew-date/:date?', (req, res, next) => {
     const date = req.params.date;
     if(date){
-        const dateArr = date.split('-');
-        const year = dateArr[2];
-        const month = dateArr[0]-1;
-        const day = dateArr[1];
-        res.send(hebcal.HDate(new Date(year, month, day)).toString('h'));
+        res.send(hebcal.HDate(new Date(date)).toString('h'));
     } else {
         res.send(hebcal.HDate().toString('h'));
     }
